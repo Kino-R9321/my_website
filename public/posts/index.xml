@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Jul 2026 11:57:16 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Troubleshooting</title>
+      <link>http://localhost:1313/posts/troubleshooting/</link>
+      <pubDate>Wed, 29 Jul 2026 11:57:16 +0900</pubDate>
+      <guid>http://localhost:1313/posts/troubleshooting/</guid>
+      <description>&lt;h1 id=&#34;障害対応トラブルシューティングメモ&#34;&gt;障害対応・トラブルシューティングメモ&lt;/h1&gt;
+&lt;h2 id=&#34;１wsl起動時にwindows領域mntcusersに迷い込む&#34;&gt;１．WSL起動時にWindows領域（/mnt/c/Users/&amp;hellip;)に迷い込む&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: ターミナル起動時に&amp;rsquo;ls -l&amp;rsquo;を実行した際、&amp;lsquo;NTUSER.DAT&amp;rsquo;や&amp;rsquo;Documents&amp;rsquo;などWindows側のファイルが一覧表示された&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: WSL起動時のカレントディレクトリがLinuxのホーム領域(&amp;rsquo;~&amp;rsquo;)ではなく、Windowsのユーザー領域(&amp;rsquo;/mnt/c/User/rkh93&amp;rsquo;)になっていたため。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: &amp;lsquo;cd&amp;rsquo; コマンドを単体で実行し、Linuxホーム領域に戻った。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;２hugoで新規記事がブラウザに表示されない&#34;&gt;２．Hugoで新規記事がブラウザに表示されない&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: 記事を作成して&amp;rsquo;hugo server&amp;rsquo; を実行しても、ページが表示されない。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: Hugoの使用上、記事ファイルの先頭にある&amp;rsquo;draft:true&amp;rsquo;（下書き状態）が有効だと通常ビルドで除外されるため。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: &amp;lsquo;draft:false&amp;rsquo; に変更するか、確認時に&amp;rsquo;hugo server -D&amp;rsquo;オプションを付けて実行した。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;３ディレクトリ指定エラーno-such-file-or-directory&#34;&gt;３．ディレクトリ指定エラー(No such file or directory)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: ファイルを開こうとすると、『No such file or directory』と表示される。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: 意図したフォルダ（&amp;lsquo;my_website&amp;rsquo;等）と異なる場所から相対パスでコマンドを実行したため。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: &amp;lsquo;pwd&amp;rsquo; で現在地を確認し、正しいディレクトリへ&amp;rsquo;cd&amp;rsquo; で移動してから操作を行った&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Workout</title>
+      <link>http://localhost:1313/posts/workout/</link>
+      <pubDate>Tue, 28 Jul 2026 11:02:04 +0900</pubDate>
+      <guid>http://localhost:1313/posts/workout/</guid>
+      <description>&lt;h1 id=&#34;筋トレ管理サイト&#34;&gt;筋トレ管理サイト&lt;/h1&gt;
+&lt;h2 id=&#34;下半身&#34;&gt;下半身&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;バーベルスクワット   70kg 6回×3set  60kg 6回×3set  50kg 6回×3set&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;フロントスクワット　バーのみ10回×2set&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ダンベルサイドスクワット　15kg 6回×2set（左右）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;カーフレイズ　70kg 30回×2set  40kg(片足)10回×2setずつ&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;728tue&#34;&gt;7/28(Tue)&lt;/h2&gt;
+&lt;h2 id=&#34;胸&#34;&gt;胸&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ベンチプレス  70kg 5×3set  60kg 5×3set  50kg 5×3set  40kg(足上げ) 5×3set&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ダンベルベンチ　15kg 8×3set&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;インクライン (内側) 10kg 5×3set&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;729wed&#34;&gt;7/29(Wed)&lt;/h2&gt;</description>
+    </item>
+  </channel>
+</rss>

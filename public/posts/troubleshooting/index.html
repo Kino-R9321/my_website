@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Troubleshooting | My New Hugo Site</title>
+<meta name="keywords" content="">
+<meta name="description" content="障害対応・トラブルシューティングメモ
+１．WSL起動時にWindows領域（/mnt/c/Users/&hellip;)に迷い込む
+
+現象: ターミナル起動時に&rsquo;ls -l&rsquo;を実行した際、&lsquo;NTUSER.DAT&rsquo;や&rsquo;Documents&rsquo;などWindows側のファイルが一覧表示された
+原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(&rsquo;~&rsquo;)ではなく、Windowsのユーザー領域(&rsquo;/mnt/c/User/rkh93&rsquo;)になっていたため。
+対応方法: &lsquo;cd&rsquo; コマンドを単体で実行し、Linuxホーム領域に戻った。
+
+２．Hugoで新規記事がブラウザに表示されない
+
+現象: 記事を作成して&rsquo;hugo server&rsquo; を実行しても、ページが表示されない。
+原因: Hugoの使用上、記事ファイルの先頭にある&rsquo;draft:true&rsquo;（下書き状態）が有効だと通常ビルドで除外されるため。
+対応方法: &lsquo;draft:false&rsquo; に変更するか、確認時に&rsquo;hugo server -D&rsquo;オプションを付けて実行した。
+
+３．ディレクトリ指定エラー(No such file or directory)
+
+現象: ファイルを開こうとすると、『No such file or directory』と表示される。
+原因: 意図したフォルダ（&lsquo;my_website&rsquo;等）と異なる場所から相対パスでコマンドを実行したため。
+対応方法: &lsquo;pwd&rsquo; で現在地を確認し、正しいディレクトリへ&rsquo;cd&rsquo; で移動してから操作を行った
+">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/troubleshooting/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6ff46447b1fa3f8a5cc0bcae48088decc3ae37f5fbc99406a3aefc3bf0e6044a.css" integrity="sha256-b/RkR7H6P4pcwLyuSAiN7MOuN/X7yZQGo678O/DmBEo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/troubleshooting/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Troubleshooting
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-07-29 11:57:16 +0900 JST'>July 29, 2026</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><h1 id="障害対応トラブルシューティングメモ">障害対応・トラブルシューティングメモ<a hidden class="anchor" aria-hidden="true" href="#障害対応トラブルシューティングメモ">#</a></h1>
+<h2 id="１wsl起動時にwindows領域mntcusersに迷い込む">１．WSL起動時にWindows領域（/mnt/c/Users/&hellip;)に迷い込む<a hidden class="anchor" aria-hidden="true" href="#１wsl起動時にwindows領域mntcusersに迷い込む">#</a></h2>
+<ul>
+<li><strong>現象</strong>: ターミナル起動時に&rsquo;ls -l&rsquo;を実行した際、&lsquo;NTUSER.DAT&rsquo;や&rsquo;Documents&rsquo;などWindows側のファイルが一覧表示された</li>
+<li><strong>原因</strong>: WSL起動時のカレントディレクトリがLinuxのホーム領域(&rsquo;~&rsquo;)ではなく、Windowsのユーザー領域(&rsquo;/mnt/c/User/rkh93&rsquo;)になっていたため。</li>
+<li><strong>対応方法</strong>: &lsquo;cd&rsquo; コマンドを単体で実行し、Linuxホーム領域に戻った。</li>
+</ul>
+<h2 id="２hugoで新規記事がブラウザに表示されない">２．Hugoで新規記事がブラウザに表示されない<a hidden class="anchor" aria-hidden="true" href="#２hugoで新規記事がブラウザに表示されない">#</a></h2>
+<ul>
+<li><strong>現象</strong>: 記事を作成して&rsquo;hugo server&rsquo; を実行しても、ページが表示されない。</li>
+<li><strong>原因</strong>: Hugoの使用上、記事ファイルの先頭にある&rsquo;draft:true&rsquo;（下書き状態）が有効だと通常ビルドで除外されるため。</li>
+<li><strong>対応方法</strong>: &lsquo;draft:false&rsquo; に変更するか、確認時に&rsquo;hugo server -D&rsquo;オプションを付けて実行した。</li>
+</ul>
+<h2 id="３ディレクトリ指定エラーno-such-file-or-directory">３．ディレクトリ指定エラー(No such file or directory)<a hidden class="anchor" aria-hidden="true" href="#３ディレクトリ指定エラーno-such-file-or-directory">#</a></h2>
+<ul>
+<li><strong>現象</strong>: ファイルを開こうとすると、『No such file or directory』と表示される。</li>
+<li><strong>原因</strong>: 意図したフォルダ（&lsquo;my_website&rsquo;等）と異なる場所から相対パスでコマンドを実行したため。</li>
+<li><strong>対応方法</strong>: &lsquo;pwd&rsquo; で現在地を確認し、正しいディレクトリへ&rsquo;cd&rsquo; で移動してから操作を行った</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">My New Hugo Site</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
