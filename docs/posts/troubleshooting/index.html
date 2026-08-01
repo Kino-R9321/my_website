@@ -25,6 +25,12 @@
 現象: ファイルを開こうとすると、『No such file or directory』と表示される。
 原因: 意図したフォルダ（&lsquo;my_website&rsquo;等）と異なる場所から相対パスでコマンドを実行したため。
 対応方法: &lsquo;pwd&rsquo; で現在地を確認し、正しいディレクトリへ&rsquo;cd&rsquo; で移動してから操作を行った
+
+４．&ldquo;localhost:1313&rdquo; に接続できない
+
+現象: ブラウザで&rsquo;http://localhost:1313/&lsquo;にアクセスした際、ページに到達できなかった
+原因: WSL側でローカル開発用サーバーが起動していないため（WSLで&rsquo;hugo server&rsquo;を起動するコマンドを打ち込んでいないため
+対応方法: ターミナルでコマンド入力（hugo server -D&rsquo;を入力→Enter→Edgeで閲覧可能になった
 ">
 <meta name="author" content="">
 <link rel="canonical" href="https://example.org/posts/troubleshooting/">
@@ -85,7 +91,7 @@
 </script><meta property="og:url" content="https://example.org/posts/troubleshooting/">
   <meta property="og:site_name" content="My New Hugo Site">
   <meta property="og:title" content="Troubleshooting">
-  <meta property="og:description" content="障害対応・トラブルシューティングメモ １．WSL起動時にWindows領域（/mnt/c/Users/…)に迷い込む 現象: ターミナル起動時に’ls -l’を実行した際、‘NTUSER.DAT’や’Documents’などWindows側のファイルが一覧表示された 原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(’~’)ではなく、Windowsのユーザー領域(’/mnt/c/User/rkh93’)になっていたため。 対応方法: ‘cd’ コマンドを単体で実行し、Linuxホーム領域に戻った。 ２．Hugoで新規記事がブラウザに表示されない 現象: 記事を作成して’hugo server’ を実行しても、ページが表示されない。 原因: Hugoの使用上、記事ファイルの先頭にある’draft:true’（下書き状態）が有効だと通常ビルドで除外されるため。 対応方法: ‘draft:false’ に変更するか、確認時に’hugo server -D’オプションを付けて実行した。 ３．ディレクトリ指定エラー(No such file or directory) 現象: ファイルを開こうとすると、『No such file or directory』と表示される。 原因: 意図したフォルダ（‘my_website’等）と異なる場所から相対パスでコマンドを実行したため。 対応方法: ‘pwd’ で現在地を確認し、正しいディレクトリへ’cd’ で移動してから操作を行った">
+  <meta property="og:description" content="障害対応・トラブルシューティングメモ １．WSL起動時にWindows領域（/mnt/c/Users/…)に迷い込む 現象: ターミナル起動時に’ls -l’を実行した際、‘NTUSER.DAT’や’Documents’などWindows側のファイルが一覧表示された 原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(’~’)ではなく、Windowsのユーザー領域(’/mnt/c/User/rkh93’)になっていたため。 対応方法: ‘cd’ コマンドを単体で実行し、Linuxホーム領域に戻った。 ２．Hugoで新規記事がブラウザに表示されない 現象: 記事を作成して’hugo server’ を実行しても、ページが表示されない。 原因: Hugoの使用上、記事ファイルの先頭にある’draft:true’（下書き状態）が有効だと通常ビルドで除外されるため。 対応方法: ‘draft:false’ に変更するか、確認時に’hugo server -D’オプションを付けて実行した。 ３．ディレクトリ指定エラー(No such file or directory) 現象: ファイルを開こうとすると、『No such file or directory』と表示される。 原因: 意図したフォルダ（‘my_website’等）と異なる場所から相対パスでコマンドを実行したため。 対応方法: ‘pwd’ で現在地を確認し、正しいディレクトリへ’cd’ で移動してから操作を行った ４．“localhost:1313” に接続できない 現象: ブラウザで’http://localhost:1313/‘にアクセスした際、ページに到達できなかった 原因: WSL側でローカル開発用サーバーが起動していないため（WSLで’hugo server’を起動するコマンドを打ち込んでいないため 対応方法: ターミナルでコマンド入力（hugo server -D’を入力→Enter→Edgeで閲覧可能になった">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -94,7 +100,7 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Troubleshooting">
-  <meta name="twitter:description" content="障害対応・トラブルシューティングメモ １．WSL起動時にWindows領域（/mnt/c/Users/…)に迷い込む 現象: ターミナル起動時に’ls -l’を実行した際、‘NTUSER.DAT’や’Documents’などWindows側のファイルが一覧表示された 原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(’~’)ではなく、Windowsのユーザー領域(’/mnt/c/User/rkh93’)になっていたため。 対応方法: ‘cd’ コマンドを単体で実行し、Linuxホーム領域に戻った。 ２．Hugoで新規記事がブラウザに表示されない 現象: 記事を作成して’hugo server’ を実行しても、ページが表示されない。 原因: Hugoの使用上、記事ファイルの先頭にある’draft:true’（下書き状態）が有効だと通常ビルドで除外されるため。 対応方法: ‘draft:false’ に変更するか、確認時に’hugo server -D’オプションを付けて実行した。 ３．ディレクトリ指定エラー(No such file or directory) 現象: ファイルを開こうとすると、『No such file or directory』と表示される。 原因: 意図したフォルダ（‘my_website’等）と異なる場所から相対パスでコマンドを実行したため。 対応方法: ‘pwd’ で現在地を確認し、正しいディレクトリへ’cd’ で移動してから操作を行った">
+  <meta name="twitter:description" content="障害対応・トラブルシューティングメモ １．WSL起動時にWindows領域（/mnt/c/Users/…)に迷い込む 現象: ターミナル起動時に’ls -l’を実行した際、‘NTUSER.DAT’や’Documents’などWindows側のファイルが一覧表示された 原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(’~’)ではなく、Windowsのユーザー領域(’/mnt/c/User/rkh93’)になっていたため。 対応方法: ‘cd’ コマンドを単体で実行し、Linuxホーム領域に戻った。 ２．Hugoで新規記事がブラウザに表示されない 現象: 記事を作成して’hugo server’ を実行しても、ページが表示されない。 原因: Hugoの使用上、記事ファイルの先頭にある’draft:true’（下書き状態）が有効だと通常ビルドで除外されるため。 対応方法: ‘draft:false’ に変更するか、確認時に’hugo server -D’オプションを付けて実行した。 ３．ディレクトリ指定エラー(No such file or directory) 現象: ファイルを開こうとすると、『No such file or directory』と表示される。 原因: 意図したフォルダ（‘my_website’等）と異なる場所から相対パスでコマンドを実行したため。 対応方法: ‘pwd’ で現在地を確認し、正しいディレクトリへ’cd’ で移動してから操作を行った ４．“localhost:1313” に接続できない 現象: ブラウザで’http://localhost:1313/‘にアクセスした際、ページに到達できなかった 原因: WSL側でローカル開発用サーバーが起動していないため（WSLで’hugo server’を起動するコマンドを打ち込んでいないため 対応方法: ターミナルでコマンド入力（hugo server -D’を入力→Enter→Edgeで閲覧可能になった">
 
 
 <script type="application/ld+json">
@@ -123,12 +129,12 @@
   "@type": "BlogPosting",
   "headline": "Troubleshooting",
   "name": "Troubleshooting",
-  "description": "障害対応・トラブルシューティングメモ １．WSL起動時にWindows領域（/mnt/c/Users/\u0026hellip;)に迷い込む 現象: ターミナル起動時に\u0026rsquo;ls -l\u0026rsquo;を実行した際、\u0026lsquo;NTUSER.DAT\u0026rsquo;や\u0026rsquo;Documents\u0026rsquo;などWindows側のファイルが一覧表示された 原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(\u0026rsquo;~\u0026rsquo;)ではなく、Windowsのユーザー領域(\u0026rsquo;/mnt/c/User/rkh93\u0026rsquo;)になっていたため。 対応方法: \u0026lsquo;cd\u0026rsquo; コマンドを単体で実行し、Linuxホーム領域に戻った。 ２．Hugoで新規記事がブラウザに表示されない 現象: 記事を作成して\u0026rsquo;hugo server\u0026rsquo; を実行しても、ページが表示されない。 原因: Hugoの使用上、記事ファイルの先頭にある\u0026rsquo;draft:true\u0026rsquo;（下書き状態）が有効だと通常ビルドで除外されるため。 対応方法: \u0026lsquo;draft:false\u0026rsquo; に変更するか、確認時に\u0026rsquo;hugo server -D\u0026rsquo;オプションを付けて実行した。 ３．ディレクトリ指定エラー(No such file or directory) 現象: ファイルを開こうとすると、『No such file or directory』と表示される。 原因: 意図したフォルダ（\u0026lsquo;my_website\u0026rsquo;等）と異なる場所から相対パスでコマンドを実行したため。 対応方法: \u0026lsquo;pwd\u0026rsquo; で現在地を確認し、正しいディレクトリへ\u0026rsquo;cd\u0026rsquo; で移動してから操作を行った ",
+  "description": "障害対応・トラブルシューティングメモ １．WSL起動時にWindows領域（/mnt/c/Users/\u0026hellip;)に迷い込む 現象: ターミナル起動時に\u0026rsquo;ls -l\u0026rsquo;を実行した際、\u0026lsquo;NTUSER.DAT\u0026rsquo;や\u0026rsquo;Documents\u0026rsquo;などWindows側のファイルが一覧表示された 原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(\u0026rsquo;~\u0026rsquo;)ではなく、Windowsのユーザー領域(\u0026rsquo;/mnt/c/User/rkh93\u0026rsquo;)になっていたため。 対応方法: \u0026lsquo;cd\u0026rsquo; コマンドを単体で実行し、Linuxホーム領域に戻った。 ２．Hugoで新規記事がブラウザに表示されない 現象: 記事を作成して\u0026rsquo;hugo server\u0026rsquo; を実行しても、ページが表示されない。 原因: Hugoの使用上、記事ファイルの先頭にある\u0026rsquo;draft:true\u0026rsquo;（下書き状態）が有効だと通常ビルドで除外されるため。 対応方法: \u0026lsquo;draft:false\u0026rsquo; に変更するか、確認時に\u0026rsquo;hugo server -D\u0026rsquo;オプションを付けて実行した。 ３．ディレクトリ指定エラー(No such file or directory) 現象: ファイルを開こうとすると、『No such file or directory』と表示される。 原因: 意図したフォルダ（\u0026lsquo;my_website\u0026rsquo;等）と異なる場所から相対パスでコマンドを実行したため。 対応方法: \u0026lsquo;pwd\u0026rsquo; で現在地を確認し、正しいディレクトリへ\u0026rsquo;cd\u0026rsquo; で移動してから操作を行った ４．\u0026ldquo;localhost:1313\u0026rdquo; に接続できない 現象: ブラウザで\u0026rsquo;http://localhost:1313/\u0026lsquo;にアクセスした際、ページに到達できなかった 原因: WSL側でローカル開発用サーバーが起動していないため（WSLで\u0026rsquo;hugo server\u0026rsquo;を起動するコマンドを打ち込んでいないため 対応方法: ターミナルでコマンド入力（hugo server -D\u0026rsquo;を入力→Enter→Edgeで閲覧可能になった ",
   "keywords": [
     
   ],
-  "articleBody": "障害対応・トラブルシューティングメモ １．WSL起動時にWindows領域（/mnt/c/Users/…)に迷い込む 現象: ターミナル起動時に’ls -l’を実行した際、‘NTUSER.DAT’や’Documents’などWindows側のファイルが一覧表示された 原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(’~’)ではなく、Windowsのユーザー領域(’/mnt/c/User/rkh93’)になっていたため。 対応方法: ‘cd’ コマンドを単体で実行し、Linuxホーム領域に戻った。 ２．Hugoで新規記事がブラウザに表示されない 現象: 記事を作成して’hugo server’ を実行しても、ページが表示されない。 原因: Hugoの使用上、記事ファイルの先頭にある’draft:true’（下書き状態）が有効だと通常ビルドで除外されるため。 対応方法: ‘draft:false’ に変更するか、確認時に’hugo server -D’オプションを付けて実行した。 ３．ディレクトリ指定エラー(No such file or directory) 現象: ファイルを開こうとすると、『No such file or directory』と表示される。 原因: 意図したフォルダ（‘my_website’等）と異なる場所から相対パスでコマンドを実行したため。 対応方法: ‘pwd’ で現在地を確認し、正しいディレクトリへ’cd’ で移動してから操作を行った ",
-  "wordCount" : "39",
+  "articleBody": "障害対応・トラブルシューティングメモ １．WSL起動時にWindows領域（/mnt/c/Users/…)に迷い込む 現象: ターミナル起動時に’ls -l’を実行した際、‘NTUSER.DAT’や’Documents’などWindows側のファイルが一覧表示された 原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(’~’)ではなく、Windowsのユーザー領域(’/mnt/c/User/rkh93’)になっていたため。 対応方法: ‘cd’ コマンドを単体で実行し、Linuxホーム領域に戻った。 ２．Hugoで新規記事がブラウザに表示されない 現象: 記事を作成して’hugo server’ を実行しても、ページが表示されない。 原因: Hugoの使用上、記事ファイルの先頭にある’draft:true’（下書き状態）が有効だと通常ビルドで除外されるため。 対応方法: ‘draft:false’ に変更するか、確認時に’hugo server -D’オプションを付けて実行した。 ３．ディレクトリ指定エラー(No such file or directory) 現象: ファイルを開こうとすると、『No such file or directory』と表示される。 原因: 意図したフォルダ（‘my_website’等）と異なる場所から相対パスでコマンドを実行したため。 対応方法: ‘pwd’ で現在地を確認し、正しいディレクトリへ’cd’ で移動してから操作を行った ４．“localhost:1313” に接続できない 現象: ブラウザで’http://localhost:1313/‘にアクセスした際、ページに到達できなかった 原因: WSL側でローカル開発用サーバーが起動していないため（WSLで’hugo server’を起動するコマンドを打ち込んでいないため 対応方法: ターミナルでコマンド入力（hugo server -D’を入力→Enter→Edgeで閲覧可能になった ",
+  "wordCount" : "50",
   "inLanguage": "en",
   "datePublished": "2026-07-29T11:57:16+09:00",
   "dateModified": "2026-07-29T11:57:16+09:00",
@@ -211,6 +217,12 @@
 <li><strong>現象</strong>: ファイルを開こうとすると、『No such file or directory』と表示される。</li>
 <li><strong>原因</strong>: 意図したフォルダ（&lsquo;my_website&rsquo;等）と異なる場所から相対パスでコマンドを実行したため。</li>
 <li><strong>対応方法</strong>: &lsquo;pwd&rsquo; で現在地を確認し、正しいディレクトリへ&rsquo;cd&rsquo; で移動してから操作を行った</li>
+</ul>
+<h2 id="４localhost1313-に接続できない">４．&ldquo;localhost:1313&rdquo; に接続できない<a hidden class="anchor" aria-hidden="true" href="#４localhost1313-に接続できない">#</a></h2>
+<ul>
+<li><strong>現象</strong>: ブラウザで&rsquo;http://localhost:1313/&lsquo;にアクセスした際、ページに到達できなかった</li>
+<li><strong>原因</strong>: WSL側でローカル開発用サーバーが起動していないため（WSLで&rsquo;hugo server&rsquo;を起動するコマンドを打ち込んでいないため</li>
+<li><strong>対応方法</strong>: ターミナルでコマンド入力（hugo server -D&rsquo;を入力→Enter→Edgeで閲覧可能になった</li>
 </ul>
 
 
