@@ -6,8 +6,44 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 11:57:16 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 10:18:14 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Commands mean</title>
+      <link>http://localhost:1313/posts/hugo-commands/</link>
+      <pubDate>Mon, 03 Aug 2026 10:18:14 +0900</pubDate>
+      <guid>http://localhost:1313/posts/hugo-commands/</guid>
+      <description>&lt;h2 id=&#34;hugoとgitの基本コマンドの意味まとめ&#34;&gt;HugoとGitの基本コマンドの意味まとめ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;※　～～はファイル名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;１記事の作成編集&#34;&gt;１．記事の作成・編集&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;rsquo;nano content/post/～～.md&amp;rsquo;：記事ファイル内のテキストを編集する&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;hugo new content/posts/～～.md&amp;rsquo;：Hugo内のcontent/posts配下に新しい記事のテンプレートを作成する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;２ローカル環境でのテスト確認&#34;&gt;２．ローカル環境でのテスト確認&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;hugo server -D&amp;rsquo;：ローカルサーバー（http://localhost:1313/）を起動しプレビューを表示させる
+（インターネット上でローカルのプレビューを見れるようにする）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;３本番用webファイル生成手動ビルド&#34;&gt;３．本番用Webファイル生成（手動ビルド）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;hugo -d docs&amp;rsquo;：MarkdownをHTML等のWeb用ファイルに変換し、docsフォルダに書き出す&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;４githubへの送信世界公開&#34;&gt;４．Githubへの送信（世界公開）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;git add .&amp;rsquo;：変更された全ファイルを送信対象としてステージング&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;git commit -m &amp;ldquo;メッセージ&amp;rdquo;&amp;rsquo;：変更内容の履歴を記録（&amp;ldquo;メッセージ&amp;quot;はGithubのダッシュボード上に表示されるもの）&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;git push origin main&amp;rsquo;：ローカルの記録をGithubへアップロード  この後にユーザーネームとトークンを聞かれる（トークンはCtrl + Shift + Vで貼り付けできるが表示されない。※　セキュリティの都合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;５トラブルシューティング&#34;&gt;５．トラブルシューティング&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;pwd&amp;rsquo;：現在作業中のディレクトリ（フォルダ階層）を確認する。&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;cd ~/～～/～～&amp;rsquo;：指定ディレクトリに移動&lt;/li&gt;
+&lt;li&gt;※　cd単体入力時はルートディレクトリに戻る&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Troubleshooting</title>
       <link>http://localhost:1313/posts/troubleshooting/</link>
