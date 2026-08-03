@@ -4,11 +4,29 @@ draft = false
 title = 'Hugo Commands mean'
 +++
 
+## HugoとGitの基本コマンドの意味まとめ ##
+* ※　～～はファイル名
 
+### １．記事の作成・編集
+* 'nano content/post/～～.md'：記事ファイル内のテキストを編集する
+* 'hugo new content/posts/～～.md'：Hugo内のcontent/posts配下に新しい記事のテンプレートを作成する
 
+### ２．ローカル環境でのテスト確認
+* 'hugo server -D'：ローカルサーバー（http://localhost:1313/）を起動しプレビューを表示させる
+（インターネット上でローカルのプレビューを見れるようにする）
 
-dfvbjvbwornaiolwnvbal
+### ３．本番用Webファイル生成（手動ビルド）
+* 'hugo -d docs'：MarkdownをHTML等のWeb用ファイルに変換し、docsフォルダに書き出す
 
+### ４．Githubへの送信（世界公開）
+* 'git add .'：変更された全ファイルを送信対象としてステージング
+* 'git commit -m "メッセージ"'：変更内容の履歴を記録（"メッセージ"はGithubのダッシュボード上に表示されるもの）
+* 'git push origin main'：ローカルの記録をGithubへアップロード  この後にユーザーネームとトークンを聞かれる（トークンはCtrl + Shift + Vで貼り付けできるが表示されない。※　セキュリティの都合
+
+### ５．トラブルシューティング
+* 'pwd'：現在作業中のディレクトリ（フォルダ階層）を確認する。
+* 'cd ~/～～/～～'：指定ディレクトリに移動
+* ※　cd単体入力時はルートディレクトリに戻る
 
 
 
