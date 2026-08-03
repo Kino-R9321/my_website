@@ -26,6 +26,18 @@ title = 'Troubleshooting'
 - **原因**: WSL側でローカル開発用サーバーが起動していないため（WSLで'hugo server'を起動するコマンドを打ち込んでいないため
 - **対応方法**: ターミナルでコマンド入力（hugo server -D'を入力→Enter→Edgeで閲覧可能になった
 
+## ５．CI/CD導入時のコマンド入力の際のエラー
+- **現象**: WordからWCLにコピペしたらコマンドの末尾（各行）に赤ハイライトが表示されてた
+- **原因**: 赤ハイライトの正体は全角スペース
+- **対応方法**: 全角スペースを削除  ※　半角なら問題なし
 
+## ６．Githubへのアップロードコマンド時のエラー
+- **現象**: 'git push origin main'入力後'without 'workflow' scope' エラー表示
+- **原因**: Personal Access Token に'workflow' 権限がない(YAMLファイルの編集をアップロードするのに井阿万でのトークンでは権限がないからエラーが出た
+- **対応方法**: GitHub内でトークンの権限設定を変更(repoだけじゃなくworkflowにもチェックを入れる)→再度git push origin main を実行→完了
 
+## ７．'Could not resolve host:github.com'エラー表示
+- **現象**: 'git push origin main' 後にユーザーネームを聞かれなかった
+- **原因**: PC、WCLが一時的にネット接続が切れてた
+- **対応方法**: Wi-Fi再接続→再度実行→ユーザーネーム聞かれる(OK)→完了
 
