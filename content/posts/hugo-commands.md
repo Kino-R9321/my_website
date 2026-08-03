@@ -17,6 +17,7 @@ title = 'Hugo Commands mean'
 
 ### ３．本番用Webファイル生成（手動ビルド）
 * 'hugo -d docs'：MarkdownをHTML等のWeb用ファイルに変換し、docsフォルダに書き出す
+* ※　CI/CDでパイプライン構築したから今後は不要
 
 ### ４．Githubへの送信（世界公開）
 * 'git add .'：変更された全ファイルを送信対象としてステージング
