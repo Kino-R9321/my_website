@@ -31,6 +31,12 @@
 &lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: ファイルを開こうとすると、『No such file or directory』と表示される。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: 意図したフォルダ（&amp;lsquo;my_website&amp;rsquo;等）と異なる場所から相対パスでコマンドを実行したため。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: &amp;lsquo;pwd&amp;rsquo; で現在地を確認し、正しいディレクトリへ&amp;rsquo;cd&amp;rsquo; で移動してから操作を行った&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;４localhost1313-に接続できない&#34;&gt;４．&amp;ldquo;localhost:1313&amp;rdquo; に接続できない&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: ブラウザで&amp;rsquo;http://localhost:1313/&amp;lsquo;にアクセスした際、ページに到達できなかった&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: WSL側でローカル開発用サーバーが起動していないため（WSLで&amp;rsquo;hugo server&amp;rsquo;を起動するコマンドを打ち込んでいないため&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: ターミナルでコマンド入力（hugo server -D&amp;rsquo;を入力→Enter→Edgeで閲覧可能になった&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>

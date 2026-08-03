@@ -6,8 +6,15 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 11:57:16 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 10:18:14 +0900</lastBuildDate>
     <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Commands mean</title>
+      <link>https://example.org/posts/hugo-commands/</link>
+      <pubDate>Mon, 03 Aug 2026 10:18:14 +0900</pubDate>
+      <guid>https://example.org/posts/hugo-commands/</guid>
+      <description>&lt;p&gt;dfvbjvbwornaiolwnvbal&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Troubleshooting</title>
       <link>https://example.org/posts/troubleshooting/</link>
