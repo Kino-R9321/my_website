@@ -30,18 +30,13 @@
 &lt;h3 id=&#34;３本番用webファイル生成手動ビルド&#34;&gt;３．本番用Webファイル生成（手動ビルド）&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&amp;lsquo;hugo -d docs&amp;rsquo;：MarkdownをHTML等のWeb用ファイルに変換し、docsフォルダに書き出す&lt;/li&gt;
+&lt;li&gt;※　CI/CDでパイプライン構築したから今後は不要&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;４githubへの送信世界公開&#34;&gt;４．Githubへの送信（世界公開）&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&amp;lsquo;git add .&amp;rsquo;：変更された全ファイルを送信対象としてステージング&lt;/li&gt;
 &lt;li&gt;&amp;lsquo;git commit -m &amp;ldquo;メッセージ&amp;rdquo;&amp;rsquo;：変更内容の履歴を記録（&amp;ldquo;メッセージ&amp;quot;はGithubのダッシュボード上に表示されるもの）&lt;/li&gt;
 &lt;li&gt;&amp;lsquo;git push origin main&amp;rsquo;：ローカルの記録をGithubへアップロード  この後にユーザーネームとトークンを聞かれる（トークンはCtrl + Shift + Vで貼り付けできるが表示されない。※　セキュリティの都合&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;５トラブルシューティング&#34;&gt;５．トラブルシューティング&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;lsquo;pwd&amp;rsquo;：現在作業中のディレクトリ（フォルダ階層）を確認する。&lt;/li&gt;
-&lt;li&gt;&amp;lsquo;cd ~/～～/～～&amp;rsquo;：指定ディレクトリに移動&lt;/li&gt;
-&lt;li&gt;※　cd単体入力時はルートディレクトリに戻る&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -73,6 +68,24 @@
 &lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: ブラウザで&amp;rsquo;http://localhost:1313/&amp;lsquo;にアクセスした際、ページに到達できなかった&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: WSL側でローカル開発用サーバーが起動していないため（WSLで&amp;rsquo;hugo server&amp;rsquo;を起動するコマンドを打ち込んでいないため&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: ターミナルでコマンド入力（hugo server -D&amp;rsquo;を入力→Enter→Edgeで閲覧可能になった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;５cicd導入時のコマンド入力の際のエラー&#34;&gt;５．CI/CD導入時のコマンド入力の際のエラー&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: WordからWCLにコピペしたらコマンドの末尾（各行）に赤ハイライトが表示されてた&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: 赤ハイライトの正体は全角スペース&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: 全角スペースを削除  ※　半角なら問題なし&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;６githubへのアップロードコマンド時のエラー&#34;&gt;６．Githubへのアップロードコマンド時のエラー&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: &amp;lsquo;git push origin main&amp;rsquo;入力後&amp;rsquo;without &amp;lsquo;workflow&amp;rsquo; scope&amp;rsquo; エラー表示&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: Personal Access Token に&amp;rsquo;workflow&amp;rsquo; 権限がない(YAMLファイルの編集をアップロードするのに井阿万でのトークンでは権限がないからエラーが出た&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: GitHub内でトークンの権限設定を変更(repoだけじゃなくworkflowにもチェックを入れる)→再度git push origin main を実行→完了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;７could-not-resolve-hostgithubcomエラー表示&#34;&gt;７．&amp;lsquo;Could not resolve host:github.com&amp;rsquo;エラー表示&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: &amp;lsquo;git push origin main&amp;rsquo; 後にユーザーネームを聞かれなかった&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: PC、WCLが一時的にネット接続が切れてた&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: Wi-Fi再接続→再度実行→ユーザーネーム聞かれる(OK)→完了&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>

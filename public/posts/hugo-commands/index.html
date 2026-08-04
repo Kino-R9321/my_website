@@ -24,18 +24,13 @@
 ３．本番用Webファイル生成（手動ビルド）
 
 &lsquo;hugo -d docs&rsquo;：MarkdownをHTML等のWeb用ファイルに変換し、docsフォルダに書き出す
+※　CI/CDでパイプライン構築したから今後は不要
 
 ４．Githubへの送信（世界公開）
 
 &lsquo;git add .&rsquo;：変更された全ファイルを送信対象としてステージング
 &lsquo;git commit -m &ldquo;メッセージ&rdquo;&rsquo;：変更内容の履歴を記録（&ldquo;メッセージ&quot;はGithubのダッシュボード上に表示されるもの）
 &lsquo;git push origin main&rsquo;：ローカルの記録をGithubへアップロード  この後にユーザーネームとトークンを聞かれる（トークンはCtrl &#43; Shift &#43; Vで貼り付けできるが表示されない。※　セキュリティの都合
-
-５．トラブルシューティング
-
-&lsquo;pwd&rsquo;：現在作業中のディレクトリ（フォルダ階層）を確認する。
-&lsquo;cd ~/～～/～～&rsquo;：指定ディレクトリに移動
-※　cd単体入力時はルートディレクトリに戻る
 ">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/hugo-commands/">
@@ -158,18 +153,13 @@
 <h3 id="３本番用webファイル生成手動ビルド">３．本番用Webファイル生成（手動ビルド）<a hidden class="anchor" aria-hidden="true" href="#３本番用webファイル生成手動ビルド">#</a></h3>
 <ul>
 <li>&lsquo;hugo -d docs&rsquo;：MarkdownをHTML等のWeb用ファイルに変換し、docsフォルダに書き出す</li>
+<li>※　CI/CDでパイプライン構築したから今後は不要</li>
 </ul>
 <h3 id="４githubへの送信世界公開">４．Githubへの送信（世界公開）<a hidden class="anchor" aria-hidden="true" href="#４githubへの送信世界公開">#</a></h3>
 <ul>
 <li>&lsquo;git add .&rsquo;：変更された全ファイルを送信対象としてステージング</li>
 <li>&lsquo;git commit -m &ldquo;メッセージ&rdquo;&rsquo;：変更内容の履歴を記録（&ldquo;メッセージ&quot;はGithubのダッシュボード上に表示されるもの）</li>
 <li>&lsquo;git push origin main&rsquo;：ローカルの記録をGithubへアップロード  この後にユーザーネームとトークンを聞かれる（トークンはCtrl + Shift + Vで貼り付けできるが表示されない。※　セキュリティの都合</li>
-</ul>
-<h3 id="５トラブルシューティング">５．トラブルシューティング<a hidden class="anchor" aria-hidden="true" href="#５トラブルシューティング">#</a></h3>
-<ul>
-<li>&lsquo;pwd&rsquo;：現在作業中のディレクトリ（フォルダ階層）を確認する。</li>
-<li>&lsquo;cd ~/～～/～～&rsquo;：指定ディレクトリに移動</li>
-<li>※　cd単体入力時はルートディレクトリに戻る</li>
 </ul>
 
 

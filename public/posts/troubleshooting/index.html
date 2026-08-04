@@ -31,6 +31,24 @@
 現象: ブラウザで&rsquo;http://localhost:1313/&lsquo;にアクセスした際、ページに到達できなかった
 原因: WSL側でローカル開発用サーバーが起動していないため（WSLで&rsquo;hugo server&rsquo;を起動するコマンドを打ち込んでいないため
 対応方法: ターミナルでコマンド入力（hugo server -D&rsquo;を入力→Enter→Edgeで閲覧可能になった
+
+５．CI/CD導入時のコマンド入力の際のエラー
+
+現象: WordからWCLにコピペしたらコマンドの末尾（各行）に赤ハイライトが表示されてた
+原因: 赤ハイライトの正体は全角スペース
+対応方法: 全角スペースを削除  ※　半角なら問題なし
+
+６．Githubへのアップロードコマンド時のエラー
+
+現象: &lsquo;git push origin main&rsquo;入力後&rsquo;without &lsquo;workflow&rsquo; scope&rsquo; エラー表示
+原因: Personal Access Token に&rsquo;workflow&rsquo; 権限がない(YAMLファイルの編集をアップロードするのに井阿万でのトークンでは権限がないからエラーが出た
+対応方法: GitHub内でトークンの権限設定を変更(repoだけじゃなくworkflowにもチェックを入れる)→再度git push origin main を実行→完了
+
+７．&lsquo;Could not resolve host:github.com&rsquo;エラー表示
+
+現象: &lsquo;git push origin main&rsquo; 後にユーザーネームを聞かれなかった
+原因: PC、WCLが一時的にネット接続が切れてた
+対応方法: Wi-Fi再接続→再度実行→ユーザーネーム聞かれる(OK)→完了
 ">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/troubleshooting/">
@@ -160,6 +178,24 @@
 <li><strong>現象</strong>: ブラウザで&rsquo;http://localhost:1313/&lsquo;にアクセスした際、ページに到達できなかった</li>
 <li><strong>原因</strong>: WSL側でローカル開発用サーバーが起動していないため（WSLで&rsquo;hugo server&rsquo;を起動するコマンドを打ち込んでいないため</li>
 <li><strong>対応方法</strong>: ターミナルでコマンド入力（hugo server -D&rsquo;を入力→Enter→Edgeで閲覧可能になった</li>
+</ul>
+<h2 id="５cicd導入時のコマンド入力の際のエラー">５．CI/CD導入時のコマンド入力の際のエラー<a hidden class="anchor" aria-hidden="true" href="#５cicd導入時のコマンド入力の際のエラー">#</a></h2>
+<ul>
+<li><strong>現象</strong>: WordからWCLにコピペしたらコマンドの末尾（各行）に赤ハイライトが表示されてた</li>
+<li><strong>原因</strong>: 赤ハイライトの正体は全角スペース</li>
+<li><strong>対応方法</strong>: 全角スペースを削除  ※　半角なら問題なし</li>
+</ul>
+<h2 id="６githubへのアップロードコマンド時のエラー">６．Githubへのアップロードコマンド時のエラー<a hidden class="anchor" aria-hidden="true" href="#６githubへのアップロードコマンド時のエラー">#</a></h2>
+<ul>
+<li><strong>現象</strong>: &lsquo;git push origin main&rsquo;入力後&rsquo;without &lsquo;workflow&rsquo; scope&rsquo; エラー表示</li>
+<li><strong>原因</strong>: Personal Access Token に&rsquo;workflow&rsquo; 権限がない(YAMLファイルの編集をアップロードするのに井阿万でのトークンでは権限がないからエラーが出た</li>
+<li><strong>対応方法</strong>: GitHub内でトークンの権限設定を変更(repoだけじゃなくworkflowにもチェックを入れる)→再度git push origin main を実行→完了</li>
+</ul>
+<h2 id="７could-not-resolve-hostgithubcomエラー表示">７．&lsquo;Could not resolve host:github.com&rsquo;エラー表示<a hidden class="anchor" aria-hidden="true" href="#７could-not-resolve-hostgithubcomエラー表示">#</a></h2>
+<ul>
+<li><strong>現象</strong>: &lsquo;git push origin main&rsquo; 後にユーザーネームを聞かれなかった</li>
+<li><strong>原因</strong>: PC、WCLが一時的にネット接続が切れてた</li>
+<li><strong>対応方法</strong>: Wi-Fi再接続→再度実行→ユーザーネーム聞かれる(OK)→完了</li>
 </ul>
 
 
