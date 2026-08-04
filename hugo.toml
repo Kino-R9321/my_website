@@ -2,3 +2,13 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'PaperMod'
+
+[params]
+  assets.disableHLJS = true
+  assets.customCSS = ["css/custom.css"]
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 1
+
