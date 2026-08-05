@@ -2,7 +2,7 @@
 <html lang="en" dir="auto" data-theme="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.154.5"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.154.5"><script src="/my_website/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my_website/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
@@ -10,17 +10,17 @@
 
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.3f02b179d49ca47c302d0befa2b4fdacfbc993c99c76660b016d204dd2e8f699.css" integrity="sha256-PwKxedScpHwwLQvvorT9rPvJk8mcdmYLAW0gTdLo9pk=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/my_website/">
+<link crossorigin="anonymous" href="/my_website/assets/css/stylesheet.3f02b179d49ca47c302d0befa2b4fdacfbc993c99c76660b016d204dd2e8f699.css" integrity="sha256-PwKxedScpHwwLQvvorT9rPvJk8mcdmYLAW0gTdLo9pk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/my_website/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/my_website/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/my_website/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/my_website/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/my_website/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/my_website/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/my_website/">
 <noscript>
     <style>
         #theme-toggle,
@@ -72,7 +72,7 @@
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <a href="http://localhost:1313/my_website/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -98,7 +98,7 @@
         </div>
         <ul id="menu" class="menu">
             <li>
-                <a href="http://localhost:1313/posts/" title="Posts">
+                <a href="http://localhost:1313/my_website/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
@@ -113,12 +113,12 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>HugoとGitの基本コマンドの意味まとめ ※　～～はファイル名 １．記事の作成・編集 ’nano content/post/～～.md’：記事ファイル内のテキストを編集する ‘hugo new content/posts/～～.md’：Hugo内のcontent/posts配下に新しい記事のテンプレートを作成する ２．ローカル環境でのテスト確認 ‘hugo server -D’：ローカルサーバー（http://localhost:1313/）を起動しプレビューを表示させる （インターネット上でローカルのプレビューを見れるようにする） ３．本番用Webファイル生成（手動ビルド） ‘hugo -d docs’：MarkdownをHTML等のWeb用ファイルに変換し、docsフォルダに書き出す ※　CI/CDでパイプライン構築したから今後は不要 ４．Githubへの送信（世界公開） ‘git add .’：変更された全ファイルを送信対象としてステージング ‘git commit -m “メッセージ”’：変更内容の履歴を記録（“メッセージ&#34;はGithubのダッシュボード上に表示されるもの） ‘git push origin main’：ローカルの記録をGithubへアップロード この後にユーザーネームとトークンを聞かれる（トークンはCtrl &#43; Shift &#43; Vで貼り付けできるが表示されない。※　セキュリティの都合 </p>
+    <p>HugoとGitの基本コマンドの意味まとめ ※　～～はファイル名 １．記事の作成・編集 ’nano content/post/～～.md’：記事ファイル内のテキストを編集する ‘hugo new content/posts/～～.md’：Hugo内のcontent/posts配下に新しい記事のテンプレートを作成する ‘rm -rf ～～：フォルダやファイルを丸ごと強制削除 ‘mkdir -p ～～：新しいディレクトリの作成コマンド（-pを付けることでまとめて作成可能 ‘assets/css/extended’のように階層を作れる ‘mv 移動元～～ 移動先～～：ファイル移動コマンド ２．ローカル環境でのテスト確認 ‘hugo server -D’：ローカルサーバー（http://localhost:1313/）を起動しプレビューを表示させる （インターネット上でローカルのプレビューを見れるようにする） ３．本番用Webファイル生成（手動ビルド） ‘hugo -d docs’：MarkdownをHTML等のWeb用ファイルに変換し、docsフォルダに書き出す ※　CI/CDでパイプライン構築したから今後は不要 ４．Githubへの送信（世界公開） ‘git add .’：変更された全ファイルを送信対象としてステージング ‘git commit -m “メッセージ”’：変更内容の履歴を記録（“メッセージ&#34;はGithubのダッシュボード上に表示されるもの） ‘git push origin main’：ローカルの記録をGithubへアップロード この後にユーザーネームとトークンを聞かれる（トークンはCtrl &#43; Shift &#43; Vで貼り付けできるが表示されない。※　セキュリティの都合 ５．エディタ内でのショートカットコマンド Ctrl &#43; K：1行ずつ削除 Ctrl &#43; O：保存　→　Enterで完了 Ctrl &#43; X：nanoエディタ終了して戻る </p>
   </div>
   <footer class="entry-footer">
 
 <span title='2026-08-03 10:18:14 +0900 JST'>August 3, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to Hugo Commands mean" href="http://localhost:1313/posts/hugo-commands/"></a>
+  <a class="entry-link" aria-label="post link to Hugo Commands mean" href="http://localhost:1313/my_website/posts/hugo-commands/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -127,12 +127,12 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>障害対応・トラブルシューティングメモ １．WSL起動時にWindows領域（/mnt/c/Users/…)に迷い込む 現象: ターミナル起動時に’ls -l’を実行した際、‘NTUSER.DAT’や’Documents’などWindows側のファイルが一覧表示された 原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(’~’)ではなく、Windowsのユーザー領域(’/mnt/c/User/rkh93’)になっていたため。 対応方法: ‘cd’ コマンドを単体で実行し、Linuxホーム領域に戻った。 ２．Hugoで新規記事がブラウザに表示されない 現象: 記事を作成して’hugo server’ を実行しても、ページが表示されない。 原因: Hugoの使用上、記事ファイルの先頭にある’draft:true’（下書き状態）が有効だと通常ビルドで除外されるため。 対応方法: ‘draft:false’ に変更するか、確認時に’hugo server -D’オプションを付けて実行した。 ３．ディレクトリ指定エラー(No such file or directory) 現象: ファイルを開こうとすると、『No such file or directory』と表示される。 原因: 意図したフォルダ（‘my_website’等）と異なる場所から相対パスでコマンドを実行したため。 対応方法: ‘pwd’ で現在地を確認し、正しいディレクトリへ’cd’ で移動してから操作を行った ４．“localhost:1313” に接続できない 現象: ブラウザで’http://localhost:1313/‘にアクセスした際、ページに到達できなかった 原因: WSL側でローカル開発用サーバーが起動していないため（WSLで’hugo server’を起動するコマンドを打ち込んでいないため 対応方法: ターミナルでコマンド入力（hugo server -D’を入力→Enter→Edgeで閲覧可能になった ５．CI/CD導入時のコマンド入力の際のエラー 現象: WordからWCLにコピペしたらコマンドの末尾（各行）に赤ハイライトが表示されてた 原因: 赤ハイライトの正体は全角スペース 対応方法: 全角スペースを削除 ※　半角なら問題なし ６．Githubへのアップロードコマンド時のエラー 現象: ‘git push origin main’入力後’without ‘workflow’ scope’ エラー表示 原因: Personal Access Token に’workflow’ 権限がない(YAMLファイルの編集をアップロードするのに井阿万でのトークンでは権限がないからエラーが出た 対応方法: GitHub内でトークンの権限設定を変更(repoだけじゃなくworkflowにもチェックを入れる)→再度git push origin main を実行→完了 ７．‘Could not resolve host:github.com’エラー表示 現象: ‘git push origin main’ 後にユーザーネームを聞かれなかった 原因: PC、WCLが一時的にネット接続が切れてた 対応方法: Wi-Fi再接続→再度実行→ユーザーネーム聞かれる(OK)→完了 </p>
+    <p>障害対応・トラブルシューティングメモ １．WSL起動時にWindows領域（/mnt/c/Users/…)に迷い込む 現象: ターミナル起動時に’ls -l’を実行した際、‘NTUSER.DAT’や’Documents’などWindows側のファイルが一覧表示された 原因: WSL起動時のカレントディレクトリがLinuxのホーム領域(’~’)ではなく、Windowsのユーザー領域(’/mnt/c/User/rkh93’)になっていたため。 対応方法: ‘cd’ コマンドを単体で実行し、Linuxホーム領域に戻った。 ２．Hugoで新規記事がブラウザに表示されない 現象: 記事を作成して’hugo server’ を実行しても、ページが表示されない。 原因: Hugoの使用上、記事ファイルの先頭にある’draft:true’（下書き状態）が有効だと通常ビルドで除外されるため。 対応方法: ‘draft:false’ に変更するか、確認時に’hugo server -D’オプションを付けて実行した。 ３．ディレクトリ指定エラー(No such file or directory) 現象: ファイルを開こうとすると、『No such file or directory』と表示される。 原因: 意図したフォルダ（‘my_website’等）と異なる場所から相対パスでコマンドを実行したため。 対応方法: ‘pwd’ で現在地を確認し、正しいディレクトリへ’cd’ で移動してから操作を行った ４．“localhost:1313” に接続できない 現象: ブラウザで’http://localhost:1313/‘にアクセスした際、ページに到達できなかった 原因: WSL側でローカル開発用サーバーが起動していないため（WSLで’hugo server’を起動するコマンドを打ち込んでいないため 対応方法: ターミナルでコマンド入力（hugo server -D’を入力→Enter→Edgeで閲覧可能になった ５．CI/CD導入時のコマンド入力の際のエラー 現象: WordからWCLにコピペしたらコマンドの末尾（各行）に赤ハイライトが表示されてた 原因: 赤ハイライトの正体は全角スペース 対応方法: 全角スペースを削除 ※　半角なら問題なし ６．Githubへのアップロードコマンド時のエラー 現象: ‘git push origin main’入力後’without ‘workflow’ scope’ エラー表示 原因: Personal Access Token に’workflow’ 権限がない(YAMLファイルの編集をアップロードするのに井阿万でのトークンでは権限がないからエラーが出た 対応方法: GitHub内でトークンの権限設定を変更(repoだけじゃなくworkflowにもチェックを入れる)→再度git push origin main を実行→完了 ７．‘Could not resolve host:github.com’エラー表示 現象: ‘git push origin main’ 後にユーザーネームを聞かれなかった 原因: PC、WCLが一時的にネット接続が切れてた 対応方法: Wi-Fi再接続→再度実行→ユーザーネーム聞かれる(OK)→完了 ８．CSSデザインが反映されてない 現象: ローカルサイトにデザイン変更が反映されてない 原因: 使用しているテーマに合わない設定・ファイル配置をしていたため(PaperMod用の配下にコマンド入力をしていた) 対応方法: ‘hugo.toml’にPaperMod用の設定を追加→カスタムCSSの配置場所を変更しPaperModのHTML構造に合わせたセレクタに修正 ９．GitHub Actionのビルド失敗(GitHubのダッシュボード上で赤×マークが表示) 現象: コマンドはうまくいったがビルド失敗 原因: ‘.github/workflows/hugo.yml’内のHugoインストール用URLに不要なスペースがあったため 対応方法: ‘workflows/hugo.yml’内のコマンドを公式の動作保証されたアクションに編集（シンプルな設定に書換え）→Push １０．本番サイト（スマホ版）でのエラー 現象: スマホ版や本番サイトでテキストのみの表記/クリックしてもExample Domainへ遷移する 原因ん: ‘hugo.toml’内のbaseURL(サイトURL)が初期設定のままで参照が崩れる、リンクが見つからない状態だったため 対応方法: baseURLの変更→Push </p>
   </div>
   <footer class="entry-footer">
 
 <span title='2026-07-29 11:57:16 +0900 JST'>July 29, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to Troubleshooting" href="http://localhost:1313/posts/troubleshooting/"></a>
+  <a class="entry-link" aria-label="post link to Troubleshooting" href="http://localhost:1313/my_website/posts/troubleshooting/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -151,7 +151,7 @@
   <footer class="entry-footer">
 
 <span title='2026-07-28 11:02:04 +0900 JST'>July 28, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to Workout" href="http://localhost:1313/posts/workout/"></a>
+  <a class="entry-link" aria-label="post link to Workout" href="http://localhost:1313/my_website/posts/workout/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -175,12 +175,12 @@
   <footer class="entry-footer">
 
 <span title='2026-07-27 15:05:13 +0900 JST'>July 27, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to My First Post" href="http://localhost:1313/posts/my-first-post/"></a>
+  <a class="entry-link" aria-label="post link to My First Post" href="http://localhost:1313/my_website/posts/my-first-post/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">My New Hugo Site</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/my_website/">My New Hugo Site</a></span> · 
 
     
     

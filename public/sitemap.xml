@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/hugo-commands/</loc>
+    <loc>http://localhost:1313/my_website/posts/hugo-commands/</loc>
     <lastmod>2026-08-03T10:18:14+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/my_website/</loc>
     <lastmod>2026-08-03T10:18:14+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/my_website/posts/</loc>
     <lastmod>2026-08-03T10:18:14+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/troubleshooting/</loc>
+    <loc>http://localhost:1313/my_website/posts/troubleshooting/</loc>
     <lastmod>2026-07-29T11:57:16+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/workout/</loc>
+    <loc>http://localhost:1313/my_website/posts/workout/</loc>
     <lastmod>2026-07-28T11:02:04+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <loc>http://localhost:1313/my_website/posts/my-first-post/</loc>
     <lastmod>2026-07-27T15:05:13+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/my_website/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/my_website/tags/</loc>
   </url>
 </urlset>

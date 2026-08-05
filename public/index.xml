@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:1313/my_website/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Aug 2026 10:18:14 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/my_website/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo Commands mean</title>
-      <link>http://localhost:1313/posts/hugo-commands/</link>
+      <link>http://localhost:1313/my_website/posts/hugo-commands/</link>
       <pubDate>Mon, 03 Aug 2026 10:18:14 +0900</pubDate>
-      <guid>http://localhost:1313/posts/hugo-commands/</guid>
+      <guid>http://localhost:1313/my_website/posts/hugo-commands/</guid>
       <description>&lt;h2 id=&#34;hugoとgitの基本コマンドの意味まとめ&#34;&gt;HugoとGitの基本コマンドの意味まとめ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;※　～～はファイル名&lt;/li&gt;
@@ -21,6 +21,9 @@
 &lt;ul&gt;
 &lt;li&gt;&amp;rsquo;nano content/post/～～.md&amp;rsquo;：記事ファイル内のテキストを編集する&lt;/li&gt;
 &lt;li&gt;&amp;lsquo;hugo new content/posts/～～.md&amp;rsquo;：Hugo内のcontent/posts配下に新しい記事のテンプレートを作成する&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;rm -rf ～～：フォルダやファイルを丸ごと強制削除&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;mkdir -p ～～：新しいディレクトリの作成コマンド（-pを付けることでまとめて作成可能 &amp;lsquo;assets/css/extended&amp;rsquo;のように階層を作れる&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;mv 移動元～～ 移動先～～：ファイル移動コマンド&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;２ローカル環境でのテスト確認&#34;&gt;２．ローカル環境でのテスト確認&lt;/h3&gt;
 &lt;ul&gt;
@@ -37,13 +40,19 @@
 &lt;li&gt;&amp;lsquo;git add .&amp;rsquo;：変更された全ファイルを送信対象としてステージング&lt;/li&gt;
 &lt;li&gt;&amp;lsquo;git commit -m &amp;ldquo;メッセージ&amp;rdquo;&amp;rsquo;：変更内容の履歴を記録（&amp;ldquo;メッセージ&amp;quot;はGithubのダッシュボード上に表示されるもの）&lt;/li&gt;
 &lt;li&gt;&amp;lsquo;git push origin main&amp;rsquo;：ローカルの記録をGithubへアップロード  この後にユーザーネームとトークンを聞かれる（トークンはCtrl + Shift + Vで貼り付けできるが表示されない。※　セキュリティの都合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;５エディタ内でのショートカットコマンド&#34;&gt;５．エディタ内でのショートカットコマンド&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ctrl + K：1行ずつ削除&lt;/li&gt;
+&lt;li&gt;Ctrl + O：保存　→　Enterで完了&lt;/li&gt;
+&lt;li&gt;Ctrl + X：nanoエディタ終了して戻る&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>Troubleshooting</title>
-      <link>http://localhost:1313/posts/troubleshooting/</link>
+      <link>http://localhost:1313/my_website/posts/troubleshooting/</link>
       <pubDate>Wed, 29 Jul 2026 11:57:16 +0900</pubDate>
-      <guid>http://localhost:1313/posts/troubleshooting/</guid>
+      <guid>http://localhost:1313/my_website/posts/troubleshooting/</guid>
       <description>&lt;h1 id=&#34;障害対応トラブルシューティングメモ&#34;&gt;障害対応・トラブルシューティングメモ&lt;/h1&gt;
 &lt;h2 id=&#34;１wsl起動時にwindows領域mntcusersに迷い込む&#34;&gt;１．WSL起動時にWindows領域（/mnt/c/Users/&amp;hellip;)に迷い込む&lt;/h2&gt;
 &lt;ul&gt;
@@ -86,13 +95,31 @@
 &lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: &amp;lsquo;git push origin main&amp;rsquo; 後にユーザーネームを聞かれなかった&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: PC、WCLが一時的にネット接続が切れてた&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: Wi-Fi再接続→再度実行→ユーザーネーム聞かれる(OK)→完了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;８cssデザインが反映されてない&#34;&gt;８．CSSデザインが反映されてない&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: ローカルサイトにデザイン変更が反映されてない&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: 使用しているテーマに合わない設定・ファイル配置をしていたため(PaperMod用の配下にコマンド入力をしていた)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: &amp;lsquo;hugo.toml&amp;rsquo;にPaperMod用の設定を追加→カスタムCSSの配置場所を変更しPaperModのHTML構造に合わせたセレクタに修正&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;９github-actionのビルド失敗githubのダッシュボード上で赤マークが表示&#34;&gt;９．GitHub Actionのビルド失敗(GitHubのダッシュボード上で赤×マークが表示)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: コマンドはうまくいったがビルド失敗&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原因&lt;/strong&gt;: &amp;lsquo;.github/workflows/hugo.yml&amp;rsquo;内のHugoインストール用URLに不要なスペースがあったため&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: &amp;lsquo;workflows/hugo.yml&amp;rsquo;内のコマンドを公式の動作保証されたアクションに編集（シンプルな設定に書換え）→Push&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;１０本番サイトスマホ版でのエラー&#34;&gt;１０．本番サイト（スマホ版）でのエラー&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;現象&lt;/strong&gt;: スマホ版や本番サイトでテキストのみの表記/クリックしてもExample Domainへ遷移する&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原因ん&lt;/strong&gt;: &amp;lsquo;hugo.toml&amp;rsquo;内のbaseURL(サイトURL)が初期設定のままで参照が崩れる、リンクが見つからない状態だったため&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;対応方法&lt;/strong&gt;: baseURLの変更→Push&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
       <title>Workout</title>
-      <link>http://localhost:1313/posts/workout/</link>
+      <link>http://localhost:1313/my_website/posts/workout/</link>
       <pubDate>Tue, 28 Jul 2026 11:02:04 +0900</pubDate>
-      <guid>http://localhost:1313/posts/workout/</guid>
+      <guid>http://localhost:1313/my_website/posts/workout/</guid>
       <description>&lt;h1 id=&#34;筋トレ管理サイト&#34;&gt;筋トレ管理サイト&lt;/h1&gt;
 &lt;h2 id=&#34;下半身&#34;&gt;下半身&lt;/h2&gt;
 &lt;ul&gt;
@@ -139,9 +166,9 @@
     </item>
     <item>
       <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <link>http://localhost:1313/my_website/posts/my-first-post/</link>
       <pubDate>Mon, 27 Jul 2026 15:05:13 +0900</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/my_website/posts/my-first-post/</guid>
       <description>&lt;h2 id=&#34;サイト作成の進捗&#34;&gt;サイト作成の進捗&lt;/h2&gt;
 &lt;h3 id=&#34;20260727&#34;&gt;2026/07/27&lt;/h3&gt;
 &lt;p&gt;1.Linuxコマンドの復讐&lt;br&gt;
