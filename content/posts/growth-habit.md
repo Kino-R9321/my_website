@@ -8,6 +8,6 @@ categories: ["Portfolio"]
 
 日々の習慣形成や振り返りをサポートするために開発した個人プロダクトです。
 
-- **GitHub Repository**: [Kino-R9321/growth-habit](https://github.com/Kino-R9321/growth-habit)（※ご自身のリポジトリURL）
+- **GitHub Repository**: [Kino-R9321/growth-habit](https://github.com/Kino-R9321/growth-habit)
 
 ---
